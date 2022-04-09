@@ -1,0 +1,32 @@
+{
+  "name": "streamerlife-chakra-ui",
+  "version": "1.0.0",
+  "description": "StreamerLife ChakraUI Theme",
+  "author": "Kevin Schmidt",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "esbuild src/index.js --bundle --minify --outfile=dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinschmidt777/streamerlife-chakra-ui.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "0.14.34",
+    "prettier": "2.6.2"
+  },
+  "bugs": {
+    "url": "https://github.com/kevinschmidt777/streamerlife-chakra-ui/issues"
+  },
+  "homepage": "https://github.com/kevinschmidt777/streamerlife-chakra-ui#readme",
+  "keywords": [
+    "StreamerLife"
+  ],
+  "dependencies": {
+    "@chakra-ui/react": "^1.8.8",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "framer-motion": "^6.2.9"
+  }
+}

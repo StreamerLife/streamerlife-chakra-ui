@@ -1,0 +1,85 @@
+name: Release package
+
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [master2]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install deps
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Save artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: streamerlife-design-kit
+          path: |
+            ./
+            !./node_modules
+            !./.git
+            !./.github
+            !./test.html
+
+  github:
+    needs: [build]
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get artifact
+        uses: actions/download-artifact@master
+        with:
+          name: streamerlife-design-kit
+          path: ./
+
+      - name: Get version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@master
+
+      - name: Save github release
+        uses: actions/create-release@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          name: streamerlife-design-kit
+          tag_name: ${{ steps.package-version.outputs.current-version}}
+          release_name: ${{ steps.package-version.outputs.current-version}}
+
+  publish:
+    needs: [github]
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get artifact
+        uses: actions/download-artifact@master
+        with:
+          name: streamerlife-design-kit
+          path: ./
+
+      - name: Setup npm
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16.x"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Npm clean install
+        run: npm ci
+
+      - name: Npm publish
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
