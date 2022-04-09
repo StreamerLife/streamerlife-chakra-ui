@@ -25,15 +25,15 @@ jobs:
       - name: Save artifact
         uses: actions/upload-artifact@master
         with:
-          name: streamerlife-design-kit
+          name: streamerlife-chakra-ui
           path: |
             ./
+            !./src
             !./node_modules
             !./.git
             !./.github
-            !./test.html
 
-  github:
+  github-release:
     needs: [build]
 
     runs-on: ubuntu-latest
@@ -42,7 +42,7 @@ jobs:
       - name: Get artifact
         uses: actions/download-artifact@master
         with:
-          name: streamerlife-design-kit
+          name: streamerlife-chakra-ui
           path: ./
 
       - name: Get version
@@ -54,12 +54,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
-          name: streamerlife-design-kit
+          name: streamerlife-chakra-ui
           tag_name: ${{ steps.package-version.outputs.current-version}}
           release_name: ${{ steps.package-version.outputs.current-version}}
 
   publish:
-    needs: [github]
+    needs: [github-release]
 
     runs-on: ubuntu-latest
 
@@ -67,7 +67,7 @@ jobs:
       - name: Get artifact
         uses: actions/download-artifact@master
         with:
-          name: streamerlife-design-kit
+          name: streamerlife-chakra-ui
           path: ./
 
       - name: Setup npm
