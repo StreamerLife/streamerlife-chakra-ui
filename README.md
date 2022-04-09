@@ -1,21 +1,11 @@
-# StreamerLife Design Kit
+# StreamerLife ChakraUI
 
-Our brand colors and design patterns, inside of an easy to use css design kit.
+Our brand colors and design patterns, inside of an easy to use theme for ChakraUI.
 
 ## Usage
-Simply use npm to install StreamerLife Design Kit into your project:
 
-`npm install streamerlife-design-kit`
+Simply use npm to install the StreamerLife ChakraUI Kit into your project:
 
-After installing, import the **"streamerlife.css" file from /dist folder** into your projects stylesheet. 
+`npm install streamerlife-chakra-ui`
 
-## Customization
-Your Project needs to be able to handle and compile SASS (.scss) files, if you want to modify the default settings of our design kit.
-
-Import the "index.scss" file from /src folder into your projects scss stylesheet.
-
-For example, to overwrite the default font-size property:
-
-`@import 'streamerlife-design-kit/src/scss/index.scss';`
-
-`$font-size: 22px;`
+After installing, import the **"theme" from /dist/index.js** into your project and use it for your ChakraProvider as a theme. That's it! :-)
