@@ -44,7 +44,9 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: streamerlife-chakra-ui
-          path: ./
+          path: |
+            ./
+            ./dist
 
       - name: Get version
         id: package-version
