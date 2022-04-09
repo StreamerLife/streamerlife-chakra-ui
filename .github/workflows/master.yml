@@ -71,7 +71,9 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: streamerlife-chakra-ui
-          path: ./
+          path: |
+            ./
+            ./dist
 
       - name: Setup npm
         uses: actions/setup-node@v2
