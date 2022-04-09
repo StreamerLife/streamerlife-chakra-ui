@@ -27,12 +27,11 @@ jobs:
         with:
           name: streamerlife-chakra-ui
           path: |
-            ./
-            ./dist
-            !./src
-            !./node_modules
-            !./.git
-            !./.github
+            /
+            !src
+            !node_modules
+            !.git
+            !.github
 
   publish:
     needs: [build]
