@@ -1,9 +1,9 @@
 {
   "name": "streamerlife-chakra-ui",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "StreamerLife ChakraUI Theme",
   "author": "Kevin Schmidt",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "build": "esbuild src/index.js --bundle --minify --outfile=index.js"
   },
