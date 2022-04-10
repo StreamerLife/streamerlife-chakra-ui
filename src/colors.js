@@ -1,7 +1,7 @@
 export const colors = {
   brand: {
-    900: "#8dc21f",
-    800: "#8dc21f",
-    700: "#8dc21f",
+    light: "#ddf894",
+    main: "#8dc21f",
+    dark: "#6e8d14",
   },
 };
