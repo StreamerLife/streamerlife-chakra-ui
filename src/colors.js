@@ -1,7 +1,7 @@
 export const colors = {
   brand: {
-    light: "#ddf894",
-    main: "#8dc21f",
-    dark: "#6e8d14",
+    50: "#ddf894",
+    100: "#8dc21f",
+    150: "#6e8d14",
   },
 };
