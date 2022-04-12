@@ -1,6 +1,6 @@
-require("@fontsource/open-sans/400.css");
-require("@fontsource/open-sans/700.css");
-require("@fontsource/montserrat/500.css");
+import "@fontsource/open-sans/400.css";
+import "@fontsource/open-sans/700.css";
+import "@fontsource/montserrat/500.css";
 
 const fonts = {
   body: "Open Sans, sans-serif",
@@ -8,4 +8,4 @@ const fonts = {
   mono: "Menlo, monospace",
 };
 
-module.exports = fonts;
+export default fonts;
