@@ -16,19 +16,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install deps
-        run: npm install
-
-      - name: Build
-        run: npm run build
-
       - name: Save artifact
         uses: actions/upload-artifact@master
         with:
           name: streamerlife-chakra-ui
           path: |
             ./
-            !./src
             !./node_modules
             !./.git
             !./.github
