@@ -8,4 +8,4 @@ const fonts = {
   mono: "Menlo, monospace",
 };
 
-module.exports = fonts;
+export default fonts;
