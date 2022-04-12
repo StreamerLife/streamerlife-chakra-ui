@@ -1,17 +1,21 @@
 {
   "name": "streamerlife-chakra-ui",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "StreamerLife ChakraUI Theme",
   "author": "Kevin Schmidt",
   "main": "index.js",
+  "scripts": {
+    "build": "esbuild theme/index.js --bundle --minify --external:/node_modules/@fontsource/* --outfile=index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kevinschmidt777/streamerlife-chakra-ui.git"
   },
   "license": "MIT",
-  "peerDependencies": {
+  "dependencies": {
+    "@fontsource/montserrat": "^4.5.7",
     "@fontsource/open-sans": "^4.5.8",
-    "@fontsource/montserrat": "^4.5.7"
+    "esbuild": "^0.14.36"
   },
   "devDependencies": {
     "prettier": "2.6.2"
