@@ -1,1 +1,2 @@
-export * from "./theme/index";
+const theme = require("./theme/index");
+module.export = theme;
