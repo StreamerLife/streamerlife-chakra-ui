@@ -49,9 +49,6 @@ jobs:
           node-version: "16.x"
           registry-url: "https://registry.npmjs.org"
 
-      - name: Npm clean install
-        run: npm ci
-
       - name: Npm publish
         run: npm publish
         env:
