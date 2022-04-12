@@ -13,4 +13,4 @@ const colors = {
   },
 };
 
-exports.colors = colors;
+exports.default = colors;
