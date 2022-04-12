@@ -1,3 +1,5 @@
+require("./fonts.css");
+
 const fonts = {
   body: "Open Sans, sans-serif",
   heading: "Montserrat, sans-serif",
