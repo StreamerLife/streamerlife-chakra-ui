@@ -2,4 +2,4 @@
 index.js
 index.css
 *.d.ts
-!index.d.ts
+*.d.ts.map

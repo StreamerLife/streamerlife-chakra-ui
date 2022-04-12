@@ -20,3 +20,4 @@ declare const theme: {
     };
 };
 export default theme;
+//# sourceMappingURL=index.d.ts.map
