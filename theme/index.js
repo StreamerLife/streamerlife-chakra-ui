@@ -1,6 +1,6 @@
-import { extendTheme } from "@chakra-ui/react";
-import { colors } from "./colors";
+const { extendTheme } = require("@chakra-ui/react");
+const { colors } = require("./colors");
 
 const theme = extendTheme({ colors: colors });
 
-export default theme;
+module.exports = theme;
