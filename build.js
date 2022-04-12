@@ -1,7 +1,6 @@
-const { dtsPlugin } = require("esbuild-plugin-d.ts");
 require("esbuild")
   .build({
-    entryPoints: ["index.ts"],
+    entryPoints: ["./theme/index.js"],
     bundle: true,
     minify: true,
     outfile: "index.js",
@@ -9,6 +8,5 @@ require("esbuild")
       ".woff2": "dataurl",
       ".woff": "dataurl",
     },
-    plugins: [dtsPlugin()],
   })
   .catch(() => process.exit(1));
