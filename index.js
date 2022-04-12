@@ -6,4 +6,4 @@ const theme = {
   fonts: fonts,
 };
 
-exports.default = theme;
+exports = theme;
