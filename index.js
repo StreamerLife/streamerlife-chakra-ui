@@ -1,2 +1,2 @@
-const { theme } = require("./theme/index");
+const theme = require("./theme/index");
 module.exports = theme;
