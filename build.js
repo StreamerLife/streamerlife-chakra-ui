@@ -1,7 +1,7 @@
 const { dtsPlugin } = require("esbuild-plugin-d.ts");
 require("esbuild")
   .build({
-    entryPoints: ["theme/index.ts"],
+    entryPoints: ["index.ts"],
     bundle: true,
     minify: true,
     outfile: "index.js",
