@@ -13,6 +13,6 @@ After installing, import the **"theme" from /node_modules/streamerlife-chakra-ui
 Inside of the same root project file, where you use expandTheme and your ChakraProvider, import the nessessary fonts from node_modules (getting installed with streamerlife-chakra-ui automatically):
 
 `import '@fontsource/open-sans/400.css'`
-`import '@fontsource/montserrat/400.css'`
+`import '@fontsource/poppins/400.css'`
 
 That's it! :-)
