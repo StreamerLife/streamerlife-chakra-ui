@@ -1,5 +1,8 @@
 const components = {
   Heading: {
+    baseStyle: {
+      color: "white",
+    },
     variants: {
       "with-line": {
         position: "relative",
