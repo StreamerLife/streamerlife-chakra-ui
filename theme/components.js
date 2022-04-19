@@ -1,4 +1,12 @@
 const components = {
+  Input: {
+    baseStyle: {
+      borderColor: "brand.grey.light",
+      _hover: {
+        borderColor: "brand.secondary.default",
+      },
+    },
+  },
   Link: {
     baseStyle: {
       color: "brand.primary.default",
