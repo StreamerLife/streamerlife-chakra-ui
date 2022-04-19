@@ -1,4 +1,9 @@
 const components = {
+  Link: {
+    baseStyle: {
+      color: "brand.primary.default",
+    },
+  },
   Heading: {
     baseStyle: {
       color: "white",
@@ -9,12 +14,28 @@ const components = {
         _before: {
           content: "''",
           position: "absolute",
-          bottom: "-1em",
-          right: "0",
-          bg: "brand.secondary.100",
+          bottom: "-5",
+          left: "0",
+          bg: "brand.secondary.default",
           width: "140px",
           height: "6px",
+          borderRadius: "full",
         },
+      },
+    },
+  },
+  Button: {
+    baseStyle: {
+      color: "black",
+      borderRadius: "full",
+      fontFamily: "Poppins, sans-serif",
+    },
+    variants: {
+      primary: {
+        bg: "brand.primary.default",
+      },
+      secondary: {
+        bg: "brand.secondary.default",
       },
     },
   },
