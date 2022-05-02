@@ -1,8 +1,8 @@
 const components = {
   Input: {
     baseStyle: {
-      borderColor: "brand.grey.200",
-      _hover: {
+      borderColor: "brand.grey.600",
+      _focus: {
         borderColor: "brand.secondary.500",
       },
     },
