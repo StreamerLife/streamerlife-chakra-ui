@@ -1,15 +1,15 @@
 const components = {
   Input: {
     baseStyle: {
-      borderColor: "brand.grey.light",
+      borderColor: "brand.grey.200",
       _hover: {
-        borderColor: "brand.secondary.default",
+        borderColor: "brand.secondary.500",
       },
     },
   },
   Link: {
     baseStyle: {
-      color: "brand.primary.default",
+      color: "brand.primary.500",
     },
   },
   Heading: {
@@ -24,7 +24,7 @@ const components = {
           position: "absolute",
           bottom: "-5",
           left: "0",
-          bg: "brand.secondary.default",
+          bg: "brand.secondary.500",
           width: "140px",
           height: "6px",
           borderRadius: "full",
@@ -34,17 +34,8 @@ const components = {
   },
   Button: {
     baseStyle: {
-      color: "black",
       borderRadius: "full",
       fontFamily: "Poppins, sans-serif",
-    },
-    variants: {
-      primary: {
-        bg: "brand.primary.default",
-      },
-      secondary: {
-        bg: "brand.secondary.default",
-      },
     },
   },
 };

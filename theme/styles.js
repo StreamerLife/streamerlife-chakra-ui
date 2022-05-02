@@ -1,11 +1,11 @@
 const styles = {
   global: {
     body: {
-      bg: "brand.grey.dark",
-      color: "brand.font.light",
+      bg: "brand.grey.900",
+      color: "brand.grey.100",
     },
     "::selection": {
-      bg: "brand.secondary.default",
+      bg: "brand.secondary.400",
       color: "black",
     },
   },
