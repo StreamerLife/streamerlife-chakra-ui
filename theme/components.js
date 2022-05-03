@@ -14,6 +14,21 @@ const components = {
       },
     },
   },
+  Textarea: {
+    variants: {
+      outline: {
+        field: {
+          border: "2px solid",
+          borderColor: "brand.grey.600",
+          outline: "none",
+          _focus: {
+            borderColor: "brand.secondary.500",
+            outline: "none",
+          },
+        },
+      },
+    },
+  },
   Link: {
     baseStyle: {
       color: "brand.primary.500",
