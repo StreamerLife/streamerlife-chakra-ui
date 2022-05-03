@@ -1,9 +1,12 @@
 const components = {
   Input: {
-    baseStyle: {
-      borderColor: "brand.grey.600",
-      _focus: {
-        borderColor: "brand.secondary.500",
+    variants: {
+      outline: {
+        borderSize: "2px",
+        borderColor: "brand.grey.600",
+        _focus: {
+          borderColor: "brand.secondary.500",
+        },
       },
     },
   },
