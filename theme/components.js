@@ -2,10 +2,14 @@ const components = {
   Input: {
     variants: {
       outline: {
-        borderSize: "2px",
-        borderColor: "brand.grey.600",
-        _focus: {
-          borderColor: "brand.secondary.500",
+        field: {
+          border: "2px solid",
+          borderColor: "brand.grey.600",
+          outline: "none",
+          _focus: {
+            borderColor: "brand.secondary.500",
+            outline: "none",
+          },
         },
       },
     },
